@@ -2,6 +2,9 @@
     --blue: hsl(207, 94%, 50%);
     --comp: #F87309;
     --black: #010101;
+    --grey-bg: rgb(245, 245, 245);
+    --money: hsl(98, 39%, 42%);
+
 }
 
 body {
@@ -33,7 +36,6 @@ body {
     margin: auto;
     width: 20%;
     max-width: 20%;
-    max-height: fit-content;
     height: auto;
 }
 
@@ -59,11 +61,11 @@ body {
 }
 
 .nav-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 .nav-link {
-    font-weight: bold;
     color: var(--blue);
     text-decoration: none;
 }
@@ -79,10 +81,11 @@ main {
 /* signup div */
 .signup-div {
     width: 30%;
-    border: .1em groove black;
     margin: 2.5% auto;
     border-radius: 8px;
-    background-color: rgb(245, 245, 245);
+    background-color: var(--grey-bg);
+    box-shadow: 0 0 .2em var(--black);
+    padding: .5%;
 }
 
 .signup-div header * {
@@ -105,6 +108,10 @@ main {
     border-radius: 4px;
 }
 
+.signup-div [type='email'] {
+    border: .05em groove var(--black);
+}
+
 .signup-div [type='email']:focus {
     outline: none;
     border: none;
@@ -114,11 +121,11 @@ main {
 .signup-div [type='submit'] {
     background-color: var(--comp);
     color: white;
-    font-weight: bold;
     border: .1em solid black;
 }
 
 .signup-div [type='submit']:hover {
+    transition: .5s;
     transform: scale(1.02);
     color: var(--blue);
     background-color: var(--black);
@@ -167,17 +174,13 @@ main {
     width: 60%;
 }
 
-h2 {
-
-    padding: 2.5%;
-}
 
 /* video container */
 .video-container {
-    height: 250px;
-    width: 400px;   
+    height: 350px;
+    width: 560px;   
     border: .1em groove gainsboro;
-    margin: 2.5% auto;
+    margin: 10% auto;
 }
 
 .video-container iframe {
@@ -186,20 +189,84 @@ h2 {
 }
 
 .products-container {
-    width: 100%;
-    border: .1em solid black;
+    width: 75%;
+    height: 80vh;
     margin: 8% auto 4% auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .product {
-    border: .1em solid black;
-    width: 32%;
+    box-shadow: 0 0 .2em var(--black);
+    width: 31%;
+    background-color: var(--grey-bg);
 }
 
 .product header * {
     text-align: center;
+}
+
+.product-name {
+    color: var(--blue);
+}
+
+.price {
+    color: var(--money);   
+}
+
+.product-image-container {
+    width: 99%;
+    max-width: 99%;
+    height: 40%;
+    max-height: 40%;
+    margin: auto;
+    background-color: white;
+    box-shadow: 0 0 .1em var(--black);
+    border-radius: 4px;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.product-feature-list {
+    list-style:none;
+    margin: 5% auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-feature {
+    margin: 1% auto;
+    padding-left: 2.5%;
+    width: 80%;
+    text-align: center;
+    color: rgb(80, 80, 80);
+}
+
+.btn-buy {
+    background-color: var(--comp);
+    color: white;
+    border: .1em solid black;
+    padding: 2% 3%;
+    border-radius: 6px;
+    display: block;
+    margin: auto;
+}
+
+.btn-buy:hover {
+    transition: .5s;
+    background-color: var(--black);
+    color: var(--blue);
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 /* footer */
@@ -223,10 +290,24 @@ h2 {
     font-family: Arial, Helvetica, sans-serif, serif;
 }
 
-h3, .feature-desc {
+h3, .feature-desc, .price, .product-feature {
     font-family: sans-serif, serif;
 }
 
 .price {
+    font-family: sans-serif;
+}
 
+.btn-buy {
+    font-size: 1rem;
+}
+
+.product-feature {
+    font-weight: 550;
+}
+
+.nav-link,
+.signup-div [type='submit'],
+.btn-buy {
+    font-weight: bold;
 }
