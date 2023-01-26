@@ -15,10 +15,10 @@ body {
 
 /* header */
 #header {
-    width: 99.5%;
-    max-width: 99.5%;
-    min-height: 15%;
-    max-height: 15%;
+    width: 99.5vw;
+    max-width: 99vw;
+    min-height: 15vh;
+    max-height: 15vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -72,15 +72,16 @@ body {
 
 /* main */
 main {
-    margin: 12.5% auto 2% auto;
+    position: relative;
+    top: 18vh;
     z-index: 1;
-    max-width: 95%;
-
+    max-width: 95vw;
+    margin: auto;
 }
 
 /* signup div */
 .signup-div {
-    width: 30%;
+    width: 30vw;
     margin: 2.5% auto;
     border-radius: 8px;
     background-color: var(--grey-bg);
@@ -135,7 +136,7 @@ main {
 
 /* features container */
 .features-container {
-    width: 66%;
+    width: 66vw;
     margin: 5% auto;
 }
 
@@ -177,8 +178,8 @@ main {
 
 /* video container */
 .video-container {
-    height: 350px;
-    width: 560px;   
+    height: 60vh;
+    width: 45vw;   
     border: .1em groove gainsboro;
     margin: 10% auto;
 }
@@ -189,7 +190,7 @@ main {
 }
 
 .products-container {
-    width: 75%;
+    width: 75vw;
     height: 80vh;
     margin: 8% auto 4% auto;
     display: flex;
@@ -272,14 +273,26 @@ main {
 /* footer */
 footer {
     border: .1em solid gainsboro;
-    width: 96.5%;
-    margin: 8% auto 0 auto;
-    padding: 1%;
-    position: relative;
-    bottom: 1%;
-    right: 1%;
+    width: 75vw;
+    height: 16vh;
+    margin: 25vh auto .5vh auto;
 }
 
+.footer-nav-list {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0;
+    border: 1px solid black;
+}
+
+.footer-nav-list li {
+    margin: 1.5%;
+}
+
+.footer-link {
+    text-decoration: none;
+}
 
 /* font-details */
 .nav-item {
