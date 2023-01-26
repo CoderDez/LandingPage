@@ -1,0 +1,232 @@
+:root {
+    --blue: hsl(207, 94%, 50%);
+    --comp: #F87309;
+    --black: #010101;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* header */
+#header {
+    width: 99.5%;
+    max-width: 99.5%;
+    min-height: 15%;
+    max-height: 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: .1em solid black;
+    background-color: var(--black);
+}
+
+#header-img {
+    display: block;
+    margin: auto;
+    width: 20%;
+    max-width: 20%;
+    max-height: fit-content;
+    height: auto;
+}
+
+#nav-bar {
+    width: 30%;
+    margin: 1.5% auto;
+}
+
+.nav-list {
+    width: 100%;
+    list-style: none;
+    display: inline-flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    color: black;
+    padding: 2%;    
+    border-radius: 6px;
+    box-shadow: 0 0 .1em rgb(200, 200, 200);
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    font-weight: bold;
+    color: var(--blue);
+    text-decoration: none;
+}
+
+/* main */
+main {
+    margin: 12.5% auto 2% auto;
+    z-index: 1;
+    max-width: 95%;
+
+}
+
+/* signup div */
+.signup-div {
+    width: 30%;
+    border: .1em groove black;
+    margin: 2.5% auto;
+    border-radius: 8px;
+    background-color: rgb(245, 245, 245);
+}
+
+.signup-div header * {
+    text-align: center;
+}
+
+
+.signup-div form fieldset {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+
+.signup-div form input {
+    padding: 1.5%;
+    margin: 1%;
+    border-radius: 4px;
+}
+
+.signup-div [type='email']:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 .1em rgb(120, 120, 120);
+}
+
+.signup-div [type='submit'] {
+    background-color: var(--comp);
+    color: white;
+    font-weight: bold;
+    border: .1em solid black;
+}
+
+.signup-div [type='submit']:hover {
+    transform: scale(1.02);
+    color: var(--blue);
+    background-color: var(--black);
+    cursor: pointer;
+}
+
+
+/* features container */
+.features-container {
+    width: 66%;
+    margin: 5% auto;
+}
+
+.feature {
+    margin: 5% auto;
+}
+
+.feature header {
+    width: 30%;
+    text-align: center;
+}
+
+.feature-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature-image-container {
+    border-radius: 8px;
+    width: 30%;
+    max-width: 30%;
+}
+
+.feature-image {
+    margin: 2% auto;
+    display: block;
+    max-width: 100%;
+}
+
+.feature-desc {
+    margin: 1% 2.5%;
+    padding: 2%;
+    align-self: center;
+    text-align: justify;
+    line-height: 1.5rem;
+    width: 60%;
+}
+
+h2 {
+
+    padding: 2.5%;
+}
+
+/* video container */
+.video-container {
+    height: 250px;
+    width: 400px;   
+    border: .1em groove gainsboro;
+    margin: 2.5% auto;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.products-container {
+    width: 100%;
+    border: .1em solid black;
+    margin: 8% auto 4% auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.product {
+    border: .1em solid black;
+    width: 32%;
+}
+
+.product header * {
+    text-align: center;
+}
+
+/* footer */
+footer {
+    border: .1em solid gainsboro;
+    width: 96.5%;
+    margin: 8% auto 0 auto;
+    padding: 1%;
+    position: relative;
+    bottom: 1%;
+    right: 1%;
+}
+
+
+/* font-details */
+.nav-item {
+    font-weight: 550;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif, serif;
+}
+
+h3, .feature-desc {
+    font-family: sans-serif, serif;
+}
+
+.price {
+
+}
