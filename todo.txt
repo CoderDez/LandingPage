@@ -1,0 +1,3 @@
+research methods for keeping an img within its container.
+change how data is displayed about products: use images and less words
+style the footer

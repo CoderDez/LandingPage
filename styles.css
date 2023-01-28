@@ -15,312 +15,84 @@ body {
 
 /* header */
 #header {
-    width: 99.5vw;
-    max-width: 99vw;
-    min-height: 15vh;
-    max-height: 15vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 5;
+    height: 12.5vh;
+    width: 98.5vw;
     margin: auto;
+    box-shadow: 0 0 .2em var(--grey-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: .1em solid black;
-    background-color: var(--black);
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--black);
 }
 
 #header-img {
     display: block;
-    margin: auto;
-    width: 20%;
-    max-width: 20%;
-    height: auto;
+    width: 30vh;
+    height: 10vh;
+    margin-left: 2.5vw;
 }
 
 #nav-bar {
-    width: 30%;
-    margin: 1.5% auto;
+    width: 40%;
+    height: 100%;
 }
 
 .nav-list {
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin: 0; padding: 0;
     list-style: none;
-    display: inline-flex;
-    justify-content: space-around;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-item {
-    color: black;
-    padding: 2%;    
-    border-radius: 6px;
-    box-shadow: 0 0 .1em rgb(200, 200, 200);
-}
-
-.nav-item:hover {
-    transform: scale(1.02);
-    cursor: pointer;
+    margin: auto 5%;
 }
 
 .nav-link {
-    color: var(--blue);
     text-decoration: none;
+    color: var(--blue);
+    border: .1em groove rgb(80, 80, 80);
+    padding: 2.5%; /* investigate */
+    border-radius: 4px;
 }
 
 /* main */
 main {
     position: relative;
-    top: 18vh;
-    z-index: 1;
-    max-width: 95vw;
-    margin: auto;
+    top: 17.5vh;
 }
 
 /* signup div */
 .signup-div {
-    width: 30vw;
-    margin: 2.5% auto;
-    border-radius: 8px;
+    width: 25%;
+    box-shadow: 0 0 .1em var(--black);
     background-color: var(--grey-bg);
-    box-shadow: 0 0 .2em var(--black);
-    padding: .5%;
+    margin: auto;
+    border-radius: 8px;
+    padding: 1%;
 }
 
 .signup-div header * {
     text-align: center;
 }
 
+.signup-div form {
+}
 
-.signup-div form fieldset {
-    box-sizing: border-box;
-    width: 100%;
+.signup-div fieldset {
     display: flex;
     justify-content: center;
-    align-items: center;
-    border: none;
-}
-
-.signup-div form input {
-    padding: 1.5%;
-    margin: 1%;
-    border-radius: 4px;
-}
-
-.signup-div [type='email'] {
-    border: .05em groove var(--black);
-}
-
-.signup-div [type='email']:focus {
-    outline: none;
-    border: none;
-    box-shadow: 0 0 .1em rgb(120, 120, 120);
-}
-
-.signup-div [type='submit'] {
-    background-color: var(--comp);
-    color: white;
-    border: .1em solid black;
-}
-
-.signup-div [type='submit']:hover {
-    transition: .5s;
-    transform: scale(1.02);
-    color: var(--blue);
-    background-color: var(--black);
-    cursor: pointer;
-}
-
-
-/* features container */
-.features-container {
-    width: 66vw;
-    margin: 5% auto;
-}
-
-.feature {
-    margin: 5% auto;
-}
-
-.feature header {
-    width: 30%;
-    text-align: center;
-}
-
-.feature-details {
-    display: flex;
-    justify-content: space-between;
-}
-
-.feature-image-container {
-    border-radius: 8px;
-    width: 30%;
-    max-width: 30%;
-}
-
-.feature-image {
-    margin: 2% auto;
-    display: block;
-    max-width: 100%;
-}
-
-.feature-desc {
-    margin: 1% 2.5%;
-    padding: 2%;
-    align-self: center;
-    text-align: justify;
-    line-height: 1.5rem;
-    width: 60%;
-}
-
-
-/* video container */
-.video-container {
-    height: 60vh;
-    width: 45vw;   
-    border: .1em groove gainsboro;
-    margin: 10% auto;
-}
-
-.video-container iframe {
-    width: 100%;
-    height: 100%;
-}
-
-.products-container {
-    width: 75vw;
-    height: 80vh;
-    margin: 8% auto 4% auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.product {
-    box-shadow: 0 0 .2em var(--black);
-    width: 31%;
-    background-color: var(--grey-bg);
-}
-
-.product header * {
-    text-align: center;
-}
-
-.product-name {
-    color: var(--blue);
-}
-
-.price {
-    color: var(--money);   
-}
-
-.product-image-container {
-    width: 99%;
-    max-width: 99%;
-    height: 40%;
-    max-height: 40%;
-    margin: auto;
-    background-color: white;
-    box-shadow: 0 0 .1em var(--black);
-    border-radius: 4px;
-}
-
-.product-image {
-    max-width: 100%;
-    height: auto;
-    max-height: 100%;
-    display: block;
     margin: auto;
 }
 
-.product-feature-list {
-    list-style:none;
-    margin: 5% auto;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
 
-.product-feature {
-    margin: 1% auto;
-    padding-left: 2.5%;
-    width: 80%;
-    text-align: center;
-    color: rgb(80, 80, 80);
-}
-
-.btn-buy {
-    background-color: var(--comp);
-    color: white;
-    border: .1em solid black;
-    padding: 2% 3%;
-    border-radius: 6px;
-    display: block;
-    margin: auto;
-}
-
-.btn-buy:hover {
-    transition: .5s;
-    background-color: var(--black);
-    color: var(--blue);
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
-/* footer */
-footer {
-    border: .1em solid gainsboro;
-    width: 75vw;
-    height: 16vh;
-    margin: 25vh auto .5vh auto;
-}
-
-.footer-nav-list {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    padding-left: 0;
-    border: 1px solid black;
-}
-
-.footer-nav-list li {
-    margin: 1.5%;
-}
-
-.footer-link {
-    text-decoration: none;
-}
-
-/* font-details */
-.nav-item {
-    font-weight: 550;
-}
-
-h2 {
-    font-family: Arial, Helvetica, sans-serif, serif;
-}
-
-h3, .feature-desc, .price, .product-feature {
-    font-family: sans-serif, serif;
-}
-
-.price {
-    font-family: sans-serif;
-}
-
-.btn-buy {
-    font-size: 1rem;
-}
-
-.product-feature {
-    font-weight: 550;
-}
-
-.nav-link,
-.signup-div [type='submit'],
-.btn-buy {
+/* font details */
+.nav-link {
     font-weight: bold;
 }
