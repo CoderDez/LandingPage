@@ -26,12 +26,15 @@ body {
     left: 0;
     top: 0;
     background: var(--black);
+    z-index: 99;
 }
 
 #header-img {
     display: block;
-    width: 30vh;
-    height: 10vh;
+    display: inline-block;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
     margin-left: 2.5vw;
 }
 
@@ -57,20 +60,26 @@ body {
 .nav-link {
     text-decoration: none;
     color: var(--blue);
-    border: .1em groove rgb(80, 80, 80);
-    padding: 2.5%; /* investigate */
+    border: .1em groove rgb(60, 60, 60);
     border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 10%;
 }
 
 /* main */
 main {
     position: relative;
     top: 17.5vh;
+    width: 100%;
+    height: auto;
 }
 
 /* signup div */
 .signup-div {
-    width: 25%;
+    width: 30%;
+    height: auto;
     box-shadow: 0 0 .1em var(--black);
     background-color: var(--grey-bg);
     margin: auto;
@@ -83,16 +92,524 @@ main {
 }
 
 .signup-div form {
+    width: 95%;
+    max-width: 95%;
+    margin: auto;
 }
 
 .signup-div fieldset {
     display: flex;
     justify-content: center;
     margin: auto;
+    border: none;
+    max-width: 100%;
 }
 
+.signup-div fieldset * {
+    margin: 1%;
+    border-radius: 4px;
+    padding: 1.25% 1.75%;
+}
+
+.signup-div fieldset [type='email'] {
+    border: .1em groove rgb(160, 160, 160);
+}
+
+.signup-div fieldset [type='submit'] {
+    border: .1em solid black;
+    background-color: var(--comp);
+    color: white;
+}
+
+/* features */
+.features-container {
+    width: 60%;
+    margin: 7.5% auto;
+}
+
+.feature {
+    margin: 2.5vh auto;
+}
+
+.feature header {
+    width: 25%;
+    text-align: center;
+}
+
+.feature-details {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.feature-image-container {
+    min-width: 25%;
+    margin-right: 2.5vw;
+}
+
+.feature-image {
+    display: block;
+    width: 65%;
+    height: auto;
+    margin: auto;
+}
+
+.video-container {
+    width: 450px;
+    height: 275px;
+    margin: auto;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    border: .1rem groove black;
+}
+
+/* products */
+.products-container {
+    width: 85%;
+    margin: 10% auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product {
+    width: 31%;
+    background-color: var(--grey-bg);
+    box-shadow: 0 0 .2em rgb(80, 80, 80);
+    border-radius: 8px;
+    box-shadow: 0 0 .2em black;
+}
+
+.product:hover {
+    transition: .8s;
+    transform: scale(1.06);
+}
+
+.product header {
+    text-align: center;
+}
+
+.product-image-container {
+    max-width: 99.5%;
+    box-shadow: 0 0 .2em rgb(80, 80, 80);
+    max-height: 50%;
+    border-radius: 4px;
+    background-color: white;
+    margin: auto;
+}
+
+.product-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: auto;    
+}
+
+.product-feature-list {
+
+}
+
+.product-feature {
+
+}
+
+.btn-buy {
+    color: white;
+    background-color: var(--comp);
+    margin: 5% auto;
+    border: .1em groove black;
+    display: block;
+    padding: 1.75% 2.5%;
+    border-radius: 8px;
+}
+
+/* cursor changes */
+.signup-div fieldset *:hover,
+.product:hover {
+    cursor: pointer;
+}
+
+.signup-div fieldset [type='email']:focus {
+    cursor: inherit;
+}
 
 /* font details */
-.nav-link {
+.nav-link,
+.signup-div fieldset [type='submit'],
+.btn-buy {
     font-weight: bold;
 }
+
+.nav-link,
+.btn-buy,
+.signup-div p,
+.price {
+    font-size: 1rem;
+    font-family: sans-serif, serif;
+}
+
+
+.signup-div form * {
+    font-size: .8rem;
+}
+
+.features-container h2 {
+    font-size: 1.8rem;
+}
+
+.feature-desc {
+    font-family: sans-serif, serif;
+    font-family: 1.1rem;
+}
+
+.products-container h2 {
+    font-size: 1.65rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.price {
+    color: var(--money);
+    font-weight: bold;
+    font-family: sans-serif, serif;
+}
+
+
+/* media queries */
+@media (max-width: 900px) {
+    /* header */
+    #header-img {
+        max-height: 80%;
+    }
+
+    /* signup div */
+    .signup-div {
+        width: 40%;
+    }
+
+    /* features container */
+    .features-container {
+        width: 75%;
+    }
+
+    /* videos container */
+    .video-container {
+        width: 360px;
+        height: 220px;
+    }
+
+    /* font details */
+    .nav-link,
+    .btn-buy,
+    .signup-div p,
+    .price {
+        font-size: .85rem;
+    }
+  
+    .signup-div form * {
+        font-size: .75rem;
+    }
+    
+    .features-container h2 {
+        font-size: 1.65rem;
+    }
+    
+    .feature-desc {
+        font-size: 1rem;
+    }
+    
+    .products-container h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 725px) {
+     /* header */
+     #header-img {
+        max-height: 75%;
+    }
+
+    /* signup div */
+    .signup-div {
+        width: 45%;
+    }
+
+    /* features container */
+    .features-container {
+        width: 82.5%;
+    }
+
+    /* videos container */
+    .video-container {
+        width: 290px;
+        height: 175px;
+    }
+
+    .products-container {
+        width: 96%;
+    }
+
+    /* font details */
+    .nav-link,
+    .btn-buy,
+    .signup-div p,
+    .price {
+        font-size: .8rem;
+    }
+  
+    .signup-div form * {
+        font-size: .7rem;
+    }
+    
+    .features-container h2 {
+        font-size: 1.5rem;
+    }
+    
+    .feature-desc {
+        font-size: .85rem;
+    }
+    
+    .products-container h2 {
+        font-size: 1.35rem;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+    }
+}
+
+@media (max-width: 675px) {
+    /* products-container becomes scrollable */
+    .products-container {
+        width: 75vw;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        border: 1px solid black;
+    }
+
+    .product {
+        min-width: 45%;
+        max-width: 45%;
+        height: 100%;
+        margin: 5% 2.5%;
+    }
+}
+
+@media (max-width: 600px) {
+    /* nav-bar */
+    #nav-bar {
+        width: 50%;
+    }
+
+    /* signup div */
+    .signup-div {
+        width: 50%;
+    }
+
+    /* features container */
+    .features-container {
+        width: 85%;
+    }
+
+    /* videos container */
+    .video-container {
+        width: 230px;
+        height: 140px;
+    }
+
+    /* font details */
+    .nav-link,
+    .btn-buy,
+    .signup-div p,
+    .price {
+        font-size: .75rem;
+    }
+  
+    .signup-div form * {
+        font-size: .65rem;
+    }
+    
+    .features-container h2 {
+        font-size: 1.25rem;
+    }
+    
+    .feature-desc {
+        font-size: .75rem;
+    }
+    
+    .products-container h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+ 
+}
+
+@media (max-width: 525px) {
+    .products-container {
+        width: 90vw;
+    }
+}
+
+
+@media (max-width: 450px) {
+    /* header */
+    #header {
+        height: 10vh;
+    }
+
+     /* nav-bar */
+     #nav-bar {
+        width: 55%;
+    }
+
+    /* header img */
+    #header-img  {
+        max-height: 60%;
+    }
+
+    /* videos container */
+    .video-container {
+        width: 180px;
+        height: 110px;
+    }
+
+    /* font details */
+    .nav-link,
+    .btn-buy,
+    .signup-div p,
+    .price {
+        font-size: .65rem;
+    }
+  
+    .signup-div form * {
+        font-size: .5rem;
+    }
+    
+    .features-container h2 {
+        font-size: 1.15rem;
+    }
+    
+    .feature-desc {
+        font-size: .65rem;
+    }
+    
+    .products-container h2 {
+        font-size: 1rem;
+    }
+
+    h3 {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    /* nav-bar */
+    #nav-bar {
+        width: 60%;
+    }
+
+    /* header img */
+    #header-img  {
+        max-height: 55%;
+    }
+
+    /* videos container */
+    .video-container {
+        width: 160px;
+        height: 95px;
+    }
+
+    /* font details */
+    .nav-link,
+    .btn-buy,
+    .signup-div p,
+    .price {
+        font-size: .6rem;
+    }
+
+    .signup-div form * {
+        font-size: .45rem;
+    }
+
+    .features-container h2 {
+        font-size: 1.05rem;
+    }
+
+    .feature-desc {
+        font-size: .6rem;
+    }
+
+    .products-container h2 {
+        font-size: .9rem;
+    }
+
+    h3 {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 300px) {
+    /* nav-bar */
+    #nav-bar {
+        width: 65%;
+    }
+
+    /* header img */
+    #header-img  {
+        max-height: 50%;
+    }
+
+    /* features container */
+    .features-container {
+        max-width: 80%;
+    }
+
+    /* videos container */
+    .video-container {
+        width: 140px;
+        height: 85px;
+    }
+
+    /* font details */
+    .nav-link,
+    .btn-buy,
+    .signup-div p,
+    .price {
+        font-size: .55rem;
+    }
+
+    .signup-div form * {
+        font-size: .42rem;
+    }
+
+    .features-container h2 {
+        font-size: 1rem;
+    }
+
+    .feature-desc {
+        font-size: .5rem;
+    }
+
+    .products-container h2 {
+        font-size: .8rem;
+    }
+
+    h3 {
+        font-size: .7rem;
+    }
+} 
