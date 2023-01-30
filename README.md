@@ -6,5 +6,5 @@ Product Landing Page built using HTML &amp; CSS for pretend company 'Rapid Scoot
 * A custom company logo.
 * A split complementary scheme generated from the custom logo.
 * Usage of CSS flexbox for sleek formatting.
-* Responsive images
-* Usage of CSS media queries
+* Responsive images.
+* Usage of CSS media queries.
