@@ -61,11 +61,11 @@ body {
     text-decoration: none;
     color: var(--blue);
     border: .1em groove rgb(60, 60, 60);
-    border-radius: 4px;
+    border-radius: 8px;
     width: 100%;
     height: 100%;
     display: block;
-    padding: 10%;
+    padding: 12.5%;
 }
 
 /* main */
@@ -280,9 +280,10 @@ main {
     font-size: 1.8rem;
 }
 
-.feature-desc {
+.feature-desc,
+.feature-span {
     font-family: sans-serif, serif;
-    font-family: 1.1rem;
+    font-size: 1.1rem;
 }
 
 .products-container h2 {
@@ -343,7 +344,8 @@ h2 {
         font-size: 1.65rem;
     }
     
-    .feature-desc {
+    .feature-desc,
+    .feature-span {
         font-size: 1rem;
     }
     
@@ -398,7 +400,8 @@ h2 {
         font-size: 1.5rem;
     }
     
-    .feature-desc {
+    .feature-desc,
+    .feature-span {
         font-size: .85rem;
     }
     
@@ -417,7 +420,6 @@ h2 {
         width: 75vw;
         overflow-x: scroll;
         overflow-y: hidden;
-        border: 1px solid black;
     }
 
     .product {
@@ -450,6 +452,12 @@ h2 {
         height: 140px;
     }
 
+    /* product feature image */
+    .product-feature img {
+        width: 20px;
+        height: 20px;
+    }
+
     /* font details */
     .nav-link,
     .btn-buy,
@@ -466,7 +474,8 @@ h2 {
         font-size: 1.25rem;
     }
     
-    .feature-desc {
+    .feature-desc,
+    .feature-span {
         font-size: .75rem;
     }
     
@@ -525,7 +534,8 @@ h2 {
         font-size: 1.15rem;
     }
     
-    .feature-desc {
+    .feature-desc,
+    .feature-span {
         font-size: .65rem;
     }
     
@@ -571,7 +581,8 @@ h2 {
         font-size: 1.05rem;
     }
 
-    .feature-desc {
+    .feature-desc,
+    .feature-span {
         font-size: .6rem;
     }
 
@@ -622,7 +633,8 @@ h2 {
         font-size: 1rem;
     }
 
-    .feature-desc {
+    .feature-desc,
+    .feature-span {
         font-size: .5rem;
     }
 
